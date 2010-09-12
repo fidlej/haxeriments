@@ -1,0 +1,13 @@
+-cp src
+-main game.Main
+-swf9 public/output.swf
+-swf-header 400:300:10:ffffff
+-debug
+
+--next
+-cp src
+-cp tests
+-swf9 public/test.swf
+-main TestMain
+-debug
+
