@@ -1,6 +1,7 @@
 
 package engine;
 
+import flash.events.Event;
 import flash.events.KeyboardEvent;
 import flash.events.EventDispatcher;
 
@@ -14,6 +15,10 @@ class Input {
         observable.addEventListener(KeyboardEvent.KEY_UP, onKeyUp,
                 false, 0, true);
         observable.addEventListener(KeyboardEvent.KEY_DOWN, onKeyDown,
+                false, 0, true);
+        observable.addEventListener(Event.ACTIVATE, restart,
+                false, 0, true);
+        observable.addEventListener(Event.DEACTIVATE, restart,
                 false, 0, true);
     }
 
@@ -42,5 +47,10 @@ class Input {
             trace("keyup: " + event);
         }
         _pressed[event.keyCode] = false;
+    }
+
+    function restart(event : Event) {
+        _pressed = [];
+        _justPressed = [];
     }
 }
