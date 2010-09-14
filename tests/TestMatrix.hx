@@ -15,4 +15,18 @@ class TestMatrix extends haxe.unit.TestCase {
        } catch (expected : String) {
        }
     }
+
+    //TODO: make visible
+    public function no_testSolve() {
+        var examples = Matrix.fromArray([
+                [1.0, 0.0, 0.0],
+                [0.0, 2.0, 0.0],
+                [0.0, 0.0, 3.0]]);
+        var targets = Matrix.fromArray([
+                [8.0],
+                [14.0],
+                [9.0]]);
+
+        assertEquals("[[8.0],[7.0],[3.0]]", examples.solve(targets).toString());
+    }
 }

@@ -2,9 +2,9 @@
 package algebra;
 
 class Matrix {
-    var m : Int;
-    var n : Int;
-    var A : Array<Array<Float>>;
+    var m(default,null) : Int;
+    var n(default,null) : Int;
+    var A(default,null) : Array<Array<Float>>;
 
     function new(values:Array<Array<Float>>) {
         m = values.length;
@@ -44,7 +44,7 @@ class Matrix {
     /**
      * Multiplies two matrices.
      */
-    public function dot(b:Matrix) {
+    public function dot(b:Matrix) : Matrix {
         if (n != b.m) {
             throw "Matrix inner dimensions must agree.";
         }
@@ -63,6 +63,21 @@ class Matrix {
         }
 
         return result;
+    }
+
+    /**
+     * Solves Ax = b.
+     * Returns the solution with the least squared error.
+     */
+    public function solve(b:Matrix) : Matrix {
+        //TODO: implement
+        //TODO: What to return if multiple solutions
+        // have zero error?
+        // a) Use L2 regularization on the x values.
+        //    Cons:
+        //    - It would affect also the computations
+        //    with only one solution or non-zero errors.
+        return null;
     }
 
     public function toString() : String {
