@@ -1,5 +1,6 @@
 -cp src
 -main game.Main
+-swf-lib assets/assets.swf
 -swf9 public/output.swf
 -swf-header 400:300:10:ffffff
 -debug

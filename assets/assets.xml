@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<movie version="9">
+    <frame>
+        <library>
+            <bitmap id="assets.images.Tiles" import="assets/images/tiles.png"/>
+        </library>
+    </frame>
+</movie>
