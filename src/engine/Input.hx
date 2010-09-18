@@ -6,6 +6,7 @@ import flash.events.KeyboardEvent;
 import flash.events.EventDispatcher;
 
 class Input {
+    public var mouse(default,null) : MouseInput;
     var _justPressed : Array<Bool>;
     var _pressed : Array<Bool>;
 
@@ -20,6 +21,8 @@ class Input {
                 false, 0, true);
         observable.addEventListener(Event.DEACTIVATE, restart,
                 false, 0, true);
+
+        mouse = new MouseInput(observable);
     }
 
     /**
@@ -32,6 +35,7 @@ class Input {
 
     public function clearJustPressed() {
         _justPressed = [];
+        mouse.clearJustPressed();
     }
 
     function onKeyDown(event : KeyboardEvent) {

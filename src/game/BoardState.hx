@@ -14,10 +14,10 @@ import flash.ui.Keyboard;
  */
 class BoardState implements GameState {
     var _dot : Blob;
-    var _points : Array<Point>;
+    var _points : List<Point>;
 
     public function new() {
-        _points = [];
+        _points = new List();
         _points.push(new Point(80, 60));
         _points.push(new Point(120, 80));
         _points.push(new Point(200, 100));
