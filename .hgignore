@@ -1,2 +1,3 @@
 ^public/.*\.swf
 ^assets/assets\.swf
+^src/game/assets/.*\.hx
