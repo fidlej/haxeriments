@@ -2,7 +2,7 @@
 <movie version="9">
     <frame>
         <library>
-            <bitmap id="game.assets.Tiles" import="assets/images/tiles.png"/>
+            <bitmap id="game.assets.Dot" import="assets/images/dot.png"/>
         </library>
     </frame>
 </movie>

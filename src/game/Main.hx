@@ -12,7 +12,7 @@ class Main {
            }
            trace("hello firebug");
 
-           var state = new IntroState();
+           var state = new BoardState();
            engine.Engine.start(400, 300, state);
 
        } catch (e : Dynamic) {
