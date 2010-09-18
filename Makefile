@@ -5,7 +5,7 @@ all: lib
 
 lib: assets/assets.swf
 
-assets/assets.swf: assets/assets.xml assets/generate_class.py
+assets/assets.swf: assets/assets.xml assets/generate_class.py assets/images/*.png
 	rm -f src/game/assets/*.hx
 	swfmill simple assets/assets.xml assets/assets.swf
 	python assets/generate_class.py assets/assets.xml src
