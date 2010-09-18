@@ -25,6 +25,8 @@ class Engine {
     }
 
     function onEnter(ignored : flash.events.Event) {
+        _input.mouse.updatePos(flash.Lib.current.mouseX,
+                flash.Lib.current.mouseY);
         var nextState = _state.update(_input);
         if (nextState != null) {
             trace("next state: " + nextState);

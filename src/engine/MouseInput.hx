@@ -1,14 +1,17 @@
 
 package engine;
 
+import flash.geom.Point;
 import flash.events.MouseEvent;
 import flash.events.EventDispatcher;
 
 class MouseInput {
+    public var pos(default,null) : Point;
     var _pressed : Bool;
     var _justPressed : Bool;
 
     public function new(observable : EventDispatcher) {
+        pos = new Point(0, 0);
         _pressed = false;
         _justPressed = false;
 
@@ -26,6 +29,11 @@ class MouseInput {
 
     public function clearJustPressed() {
         _justPressed = false;
+    }
+
+    public function updatePos(x, y) {
+        pos.x = x;
+        pos.y = y;
     }
 
     function onMouseDown(event : MouseEvent) {

@@ -10,4 +10,7 @@ assets/assets.swf: assets/assets.xml assets/generate_class.py assets/images/*.pn
 	swfmill simple assets/assets.xml assets/assets.swf
 	python assets/generate_class.py assets/assets.xml src
 
-.PHONY: all lib
+publish:
+	rsync -rlv public fidlej@kvik:~/public_html/public/flash/
+
+.PHONY: all lib publish
