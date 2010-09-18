@@ -18,9 +18,9 @@ class BoardState implements GameState {
 
     public function new() {
         _points = [];
-        _points.push(new Point(10, 20));
-        _points.push(new Point(25, 40));
-        _points.push(new Point(84, 64));
+        _points.push(new Point(80, 60));
+        _points.push(new Point(120, 80));
+        _points.push(new Point(200, 100));
         _dot = new Blob(new game.assets.Dot());
     }
 
@@ -29,7 +29,7 @@ class BoardState implements GameState {
     }
 
     public function render(arena : BitmapData) : Void {
-        var background = 0xff555500;
+        var background = 0xffaaaaff;
         arena.fillRect(arena.rect, background);
         for (point in _points) {
             _dot.draw(arena, point);
